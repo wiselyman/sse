@@ -1,4 +1,4 @@
-# 使用SSE监听异步通知并推送到客户端(Spring Boot 2.0 + SseEmitter)
+# 使用SSE监听异步通知并推送到客户端(SpringBoot2.0+SseEmitter)
 
 ## 1.场景
 
