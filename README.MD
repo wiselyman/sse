@@ -1,4 +1,4 @@
-# 使用SseEmitter,Spring事件推送数据(SpringBoot2.0)
+# 使用SseEmitter,Spring Event推送数据(SpringBoot2.0)
 
 ## 1.场景
 
