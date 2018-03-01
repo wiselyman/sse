@@ -1,6 +1,9 @@
 # 使用SSE监听异步通知并推送到客户端
 
-## 场景
+## 1.场景
+
+当我们做异步请求处理的时候，客户端向服务端的请求不是立即返回的，而是在服务端有数据的时候才发送给客户端的。本例演示是服务端数据是另外的事件触发并推送给客户端的。
+
 当使用微信或者支付宝扫码支付的时候，在客户支付成功之后，后台得到微信(支付宝)回调需要通知我们的客户端支付已经完成，客户端得到通知后可以做一些后续的操作。
 这涉及到后台需要将支付成功的消息主动推送给客户端，让客户端记性后续的操作。
 
@@ -11,7 +14,9 @@
 
 名词解释：`SSE`-`server send event`是一种服务端推送的技术，本例使用`SseEmitter`来实现。
 
-## `SseController`
+
+
+## 2.`SseController`
 
 ```java
 @RestController
@@ -45,7 +50,7 @@ public class SseController {
 
 ```
 
-## `PayCompletedEvent`
+## 3.`PayCompletedEvent`
 
 ```java
 @Getter
@@ -62,7 +67,7 @@ public class PayCompletedEvent extends ApplicationEvent {
 ```
 
 
-## PayCompletedListener
+## 4.PayCompletedListener
 
 ```java
 @Component
@@ -85,7 +90,7 @@ public class PayCompletedListener {
 
 ```
 
-## 演示
+## 5.演示
 
 - 先访问`http://localhost:8080/push?payRecordId=123`,此时客户端处于等待状态.
 
