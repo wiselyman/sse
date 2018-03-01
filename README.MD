@@ -94,7 +94,7 @@ public class PayCompletedListener {
 
 - 先访问`http://localhost:8080/push?payRecordId=123`,此时客户端处于等待状态.
 
-![](images/sse1.png)
+![](https://raw.githubusercontent.com/wiselyman/sse/master/images/sse1.png)
 
 - 再访问`http://localhost:8080/pay-callback?payRecordId=123`,模拟回调通知客户端支付成功,这是会通知上一步并推送到客户端.
-![](images/sse2.png)
+![](https://raw.githubusercontent.com/wiselyman/sse/master/images/sse2.png)
